@@ -4,7 +4,17 @@
 // день тижня та кількість калорій calories, спожитих спортсменом, у цей день.
 // Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи.
 //  У консоль будуть виведені результати її викликів.
-
+function calcAverageCalories(days) {
+  let value = 0;
+  for (const item of days) {
+    value += item.calories;
+  }
+  if (days.length === 0) {
+    return 0;
+  }
+  const averageValue = value / days.length;
+  return averageValue;
+}
 console.log(
   calcAverageCalories([
     { day: "monday", calories: 3010 },
